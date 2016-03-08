@@ -11,4 +11,6 @@ class Medio(object):
 
         #TODO reflejar en un medio debe reflejar en todos los blancos de un medio
         #y devolver la senal reflejada
+        return self.blancos.reflejar( una_senal, tiempo_inicial, tiempo_final)
+        
         pass
