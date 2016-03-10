@@ -42,7 +42,7 @@ def main():
     tiempo_inicial_del_blanco = datetime.datetime(2016, 3, 5, 2)
     tiempo_final_del_blanco = datetime.datetime(2016, 3, 5, 4)
     #TODO contruir un nuevo blanco
-    un_blanco = blanco.Blanco(amplitud, tiempo_inicial, tiempo_final)
+    un_blanco = blanco.Blanco(amplitud_de_frecuencia_del_blanco, tiempo_inicial_del_blanco, tiempo_final_del_blanco)
 
     #TODO contruir un medio
     un_medio = medio.Medio(un_blanco)

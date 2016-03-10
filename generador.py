@@ -19,9 +19,9 @@ class Generador(object):
         import math
         import numpy as np
 
-        cantidad_muestras = (tiempo_final - tiempo_inicial).seconds/\
-        self.frecuencia_muestreo
-
+        cantidad_muestras = (tiempo_final - tiempo_inicial).seconds /\
+        self.frecuencia_muestreo      
+        
         cantidad_muestras = int(cantidad_muestras)
 
         muestras = range(cantidad_muestras)

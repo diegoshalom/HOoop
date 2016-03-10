@@ -22,16 +22,20 @@ class Radar(object):
             
         una_senal = self.generador.generar(tiempo_inicial, tiempo_final)
            
-        print una_senal   
+        #print una_senal   
         
-        def plotear_senal(senal):
-            plt.plot(senal)
-
-        plotear_senal(una_senal)          
+        sent, = plt.plot(una_senal,label='Sent')          
           
         una_senal_reflejada = medio.reflejar(una_senal, tiempo_inicial, tiempo_final)
         
-        #plotear_senal(una_senal_reflejada)
+        received, = plt.plot(una_senal_reflejada,label='Received')
+        plt.ylabel('Signal')
+        plt.grid(True)
+        plt.xlabel('Time (au)')
+        plt.legend(handles = [sent,received])
+        plt.show()
+
+        
         
         return self.detector.detectar(una_senal_reflejada)
  
